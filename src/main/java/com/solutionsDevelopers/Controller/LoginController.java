@@ -33,45 +33,16 @@ public class LoginController {
     public ModelAndView Login() {
         ModelAndView mav = new ModelAndView();
 //        mav.addObject("Usuarios", new Usuarios());
-        mav.setViewName("Administrador/login");
+        mav.setViewName("Login/Login");
         return mav;
     }
 
-    /// Method Post for Login
-    @RequestMapping(method = RequestMethod.POST)
-    public ModelAndView Login(
-    //        @ModelAttribute("Usuarios") Usuarios m,
-            BindingResult result,
-            SessionStatus status,
-            HttpServletRequest re,
-            Model model
-    ) throws IOException {
-      //  this.loginValidator.validate(m, result);
-        if (result.hasErrors()) {
-            ModelAndView mav = new ModelAndView();
-            mav.setViewName("Administrador/login");
-            //mav.addObject("Usuarios", new Usuarios());
-            return mav;
-        } else {
-            ModelAndView mav = new ModelAndView();
-    /*
-            MetodosHql meto= new MetodosHql();
-            Usuarios usu = meto.buscarUsuario(new Usuarios(m.getNomIdUsuario(), new Encriptacion().encripta(m.getContrasena())));
-                Datos_pc pc = new Datos_pc().obtener();
-                meto.guardarDatos(
-                        new LogSession(
-                                usu.getIdUsuarios(),
-                                pc.getIp(),
-                                pc.getMac(),
-                                pc.getHost(),
-                                true));
-                HttpSession session = re.getSession(true);
-                session.setAttribute("usuario", usu);
-                mav.addObject("usuario", usu);
-                meto.modificarConexion(usu.getIdUsuarios(), true);
-                */
-                mav.setViewName("redirect:/index_admin.htm");
-            return mav;
-        }
+    @RequestMapping(method = RequestMethod.GET)
+    public ModelAndView Bienvenida() {
+        ModelAndView mav = new ModelAndView();
+//        mav.addObject("Usuarios", new Usuarios());
+        mav.setViewName("Login/Bienvenida");
+        return mav;
     }
+    
 }

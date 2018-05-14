@@ -14,7 +14,19 @@
     <bean id="urlMapping" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
         <property name="mappings">
             <props>
-                <prop key="index.htm">LoginController</prop>
+                <prop key="Bienvenida.htm">LoginController</prop>
+                <prop key="Encabezado_Bienvenida.htm">LoginController</prop>
+                <prop key="Encabezado_Login.htm">LoginController</prop>
+                <prop key="Footer_Bienvenida.htm">LoginController</prop>
+                <prop key="Header_Bienvenida.htm">LoginController</prop>
+                <prop key="Js_Bienvenida.htm">LoginController</prop>
+                <prop key="Login.htm">LoginController</prop>
+                <prop key="Encabezado_Portal.htm">PortalController</prop>
+                <prop key="Footer_Portal.htm">PortalController</prop>
+                <prop key="Js_Portal.htm">PortalController</prop>
+                <prop key="Menu_Izquierdo_Portal.htm">PortalController</prop>
+                <prop key="Menu_Top_Portal.htm">PortalController</prop>
+                <prop key="Portal.htm">PortalController</prop>
             </props>
         </property>
     </bean>
