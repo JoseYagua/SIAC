@@ -1,47 +1,43 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.solutionsDevelopers.Controller;
 
 import com.solutionsDevelopers.ValidatorModels.LoginValidator;
-import java.io.IOException;
 import javax.servlet.http.HttpServletRequest;
-import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.support.SessionStatus;
 import org.springframework.web.portlet.ModelAndView;
+
 
 /**
  *
  * @author José Yagua
  */
+
+@Controller
 public class LoginController {
 
     private final LoginValidator loginValidator;
-
+    private final ModelAndView mav;
     /// Builder for class LoginController
     public LoginController() {
     this.loginValidator = new LoginValidator();
+    this.mav = new ModelAndView();
     }
     
+    
     /// Method Get for Login
-       @RequestMapping(method = RequestMethod.GET)
-    public ModelAndView Login() {
-        ModelAndView mav = new ModelAndView();
-//        mav.addObject("Usuarios", new Usuarios());
+    @RequestMapping(value = "Login.htm", method = RequestMethod.GET)
+    public ModelAndView Login(HttpServletRequest re) {
+        mav.addObject("Usuarios", "Jose");
         mav.setViewName("Login/Login");
         return mav;
     }
 
-    @RequestMapping(method = RequestMethod.GET)
-    public ModelAndView Bienvenida() {
-        ModelAndView mav = new ModelAndView();
-//        mav.addObject("Usuarios", new Usuarios());
-        mav.setViewName("Login/Bienvenida");
+    
+    @RequestMapping(value = "Bienvenida.htm", method = RequestMethod.GET)
+    public ModelAndView Bienvenida(HttpServletRequest re) {
+        mav.addObject("Usuarios", "Jose");
+        mav.setViewName("Pages/Login/Bienvenida");
         return mav;
     }
     

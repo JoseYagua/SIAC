@@ -21,12 +21,14 @@
                 <prop key="Header_Bienvenida.htm">LoginController</prop>
                 <prop key="Js_Bienvenida.htm">LoginController</prop>
                 <prop key="Login.htm">LoginController</prop>
+                <!--
                 <prop key="Encabezado_Portal.htm">PortalController</prop>
                 <prop key="Footer_Portal.htm">PortalController</prop>
                 <prop key="Js_Portal.htm">PortalController</prop>
                 <prop key="Menu_Izquierdo_Portal.htm">PortalController</prop>
                 <prop key="Menu_Top_Portal.htm">PortalController</prop>
                 <prop key="Portal.htm">PortalController</prop>
+                -->
             </props>
         </property>
     </bean>
@@ -37,7 +39,7 @@
           p:suffix=".jsp" />
 
     <!--Controller -->
-    <bean name="AdministratorController" class="com.solutionsDevelopers.Controller.AdministratorController" />
+    <!-- <bean name="AdministratorController" class="com.solutionsDevelopers.Controller.AdministratorController" /> -->
     <bean name="LoginController" class="com.solutionsDevelopers.Controller.LoginController" />
-    <bean name="PortalController" class="com.solutionsDevelopers.ControllerPortalController" />
+    <!--<bean name="PortalController" class="com.solutionsDevelopers.ControllerPortalController" />-->
 </beans>
